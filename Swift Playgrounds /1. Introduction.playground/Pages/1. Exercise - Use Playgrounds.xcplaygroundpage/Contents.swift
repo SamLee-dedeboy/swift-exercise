@@ -10,7 +10,9 @@ print("How to use playgrounds to make writing Swift fun and simple")
 /*:
  Now print your own phrases to the console. Pick one of your favorite songs. Use your knowledge of the `print` function to display the song title and artist.
  */
-
+var title = "someTitle"
+var artist = "someone"
+print("title:\(title)\n"+"artist:\(artist)\n")
 
 /*:
  Use multiple `print` functions to write out some of the lyrics to the song.
