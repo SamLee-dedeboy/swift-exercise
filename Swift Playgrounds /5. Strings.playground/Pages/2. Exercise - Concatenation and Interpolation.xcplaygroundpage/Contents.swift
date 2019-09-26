@@ -21,6 +21,8 @@ print(introduction)
  
  Insert `name` where indicated, and insert a mathematical expression that evaluates to your current age plus one where indicated.
  */
-
+let name = "lyd"
+let age = 21
+print("my name is \(name) and aftter my next birthday i will be \(age) years old")
 
 //: [Previous](@previous)  |  page 2 of 5  |  [Next: App Exercise - Notifications](@next)

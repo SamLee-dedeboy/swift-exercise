@@ -17,15 +17,15 @@
  */
 let currentHR = 128
 switch currentHR {
-case 100..<121:
+case 100...120:
     print("You are in the Very Light zone. Activity in this zone helps with recovery.")
-case 121..<141:
+case 121...140:
     print("You are in the Light zone. Activity in this zone helps improve basice endurance and fat burning.")
-case 141..<161:
+case 141...160:
     print("You are in the Moderate zone. Activity in this zone helps improve aerobic fitness.")
-case 161..<181:
+case 161...180:
     print("You are in the Hard zone. Activity in this zone increases maximum performance capacity for shorter sessions.")
-case 181..<201:
+case 181...200:
     print("You are in the Maximum zone. Activity in this zone helps fit athletes develop speed.")
 default:
     print("default")

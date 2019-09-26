@@ -8,12 +8,29 @@
  A reoccurring process like this is a perfect candidate for a function. Write a function called `incrementSteps` after the declaration of `steps` below that will increment `steps` by one and then print its value. Call the function multiple times and observe the printouts.
  */
 var steps = 0
-
-
+func incrementSteps(_ originSteps: inout Int) {
+    steps+=1
+    print(steps)
+}
+incrementSteps(&steps)
+incrementSteps(&steps)
 /*:
  Similarly, if you want to regularly provide progress updates to your user, you can put your control flow statements that check on progress into a function. Write a function called `progressUpdate` after the declaration of `goal` below. The function should print "You're off to a good start." if `steps` is less than 10% of `goal`, "You're almost halfway there!" if `steps` is less than half of `goal`, "You're over halfway there!" if `steps` is less than 90% of `goal`, "You're almost there!" if `steps` is less than `goal`, and "You beat your goal!" otherwise. Call the function and observe the printout. Remember, you can convert numbers using the appropriate Int or Double initializer.
  */
 let goal = 10000
-
+func progressUpdate(_ steps: Double, _ goal: Double) {
+    if steps < (goal / 10) {
+        print("you're off to a good start")
+    } else if steps < (goal / 2) {
+        print("you're almost halfway there")
+    } else if steps < (0.9 * goal) {
+        print("you're over halfway there")
+    } else if steps < goal {
+        print("you're almost there")
+    } else {
+        print("you beat your goal!")
+    }
+}
+progressUpdate(Double(steps), Double(goal))
 
 //: [Previous](@previous)  |  page 2 of 6  |  [Next: Exercise - Parameters and Argument Labels](@next)
