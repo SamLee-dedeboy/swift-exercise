@@ -16,7 +16,7 @@ struct RunningWorkout {
     static let meterInFeet = 3.28084
     static let mileInMeters = 1600
     static func mileTimeFor(distance:Double, time:Double) -> Double {
-        return distance/time	
+        return distance/time
     }
 }
 print(RunningWorkout.mileTimeFor(distance: 1000, time: 10))
