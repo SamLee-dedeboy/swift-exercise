@@ -51,5 +51,5 @@ print(sortedPeople)
  Make the `Human` class adopt the `Codable` protocol. Create a `JSONEncoder` and use it to encode as data one of the `Human` objects you have initialized. Then use that `Data` object to initialize a `String` representing the data that is stored, and print it to the console.
  */
 
-
+//这题需要swift4，而机房的swift版本是3.2
 //: page 1 of 5  |  [Next: App Exercise - Printable Workouts](@next)
