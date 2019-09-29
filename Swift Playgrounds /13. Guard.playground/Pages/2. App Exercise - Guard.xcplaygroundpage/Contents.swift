@@ -14,12 +14,12 @@ struct Workout {
     var startTime:Double
     var endTime:Double
     init?(startTime:Double, endTime:Double) {
-        if endTime - startTime < 10 {
+        guard endTime - startTime > 10 else {
             return nil
-        } else {
-            self.startTime = startTime
-            self.endTime = endTime
         }
+        self.startTime = startTime
+        self.endTime = endTime
+        
     }
 }
 
@@ -39,11 +39,11 @@ let caloriesTextField = UITextField()
 foodTextField.text = "Banana"
 caloriesTextField.text = "23?"
 func logFood() -> Food? {
-    if let food = foodTextField.text, let caloriesInStr = caloriesTextField.text, let calories = Int(caloriesInStr) {
-        return Food(name: food, calories: calories)
-    } else {
+    guard let food = foodTextField.text, let caloriesInStr = caloriesTextField.text, let calories = Int(caloriesInStr) else {
         return nil
     }
+    return Food(name: food, calories: calories)
+
 }
 
 /*:

@@ -5,7 +5,7 @@
  
  The `Workout` objects you have created so far in app exercises don't show a whole lot of useful information when printed to the console. They also aren't very easy to compare or sort. Throughout these exercises, you'll make the `Workout` class below adopt certain protocols that will solve these issues.
  */
-class Workout : CustomStringConvertible, Equatable, Comparable {
+class Workout : CustomStringConvertible, Equatable, Comparable, Codable {
     var distance: Double
     var time: Double
     var identifier: Int
@@ -52,5 +52,6 @@ var sortedWorkouts = workouts.sorted()
  Make `Workout` adopt the `Codable` protocol so you can easily encode `Workout` objects as data that can be stored between app launches. Use a `JSONEncoder` to encode one of your `Workout` instances. Then use the encoded data to initialize a `String`, and print it to the console.
  */
 import Foundation
-//同上一页，需要升级swift 4
+var someData = try JSONEncoder().encode(instance3)
+print(String(decoding:someData, as:UTF8.self))
 //: [Previous](@previous)  |  page 2 of 5  |  [Next: Exercise - Create a Protocol](@next)
